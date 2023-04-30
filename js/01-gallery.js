@@ -10,7 +10,7 @@ const markup = galleryItems
     <img
       class="gallery__image"
       src="${item.preview}"
-      data-source="large-image.jpg"
+      data-source="${item.original}"
       alt="${item.description}"
     />
   </a>
@@ -36,7 +36,7 @@ function onImageClick(event) {
 
   list.addEventListener("keydown", (event) => {
     if (event.code === "Escape") {
-      instance.close;
+      instance.close();
     }
   });
 }
